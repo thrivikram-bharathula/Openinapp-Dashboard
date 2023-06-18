@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/rounded_border"
+    android:layout_margin="16dp"
+    android:layout_marginLeft="10dp"
+    >
+
+    <!-- Square shaped image -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@drawable/icons8_no_image_50"
+        android:scaleType="centerCrop" />
+
+    <!-- Text view at the bottom aligned in the middle -->
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="---"
+        android:lineSpacingExtra="5sp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/figtreeblack" />
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:text="Loading.."
+        android:lineSpacingExtra="5sp"
+        android:gravity="center_vertical"
+        android:textSize="12sp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/grey"
+        android:fontFamily="@font/figtreebold" />
+
+</LinearLayout>

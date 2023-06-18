@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Main activity -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/initial">
+
+    <!-- Dashboard layout -->
+        <RelativeLayout
+            android:background="@drawable/navbar"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:id="@+id/blue_card"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/text_dashboard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dashboard"
+                android:paddingLeft="10sp"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/figtreeblack"/>
+
+            <ImageView
+                android:id="@+id/image_right"
+                android:paddingRight="15sp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/button1"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+    <!-- Scrollable layout -->
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/blue_card">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/rectangle_8"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Greeting -->
+
+                <TextView
+                    android:layout_marginTop="15dp"
+                    android:id="@+id/greeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:lineSpacingExtra="5sp"
+                    android:gravity="center_vertical"
+                    android:textColor="#999CA0"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fingtree" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_vertical">
+
+                        <TextView
+                            android:id="@+id/name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="32dp"
+                            android:lineSpacingExtra="3sp"
+                            android:text="Thrivikram Bharathula"
+                            android:textSize="24sp"
+                            android:fontFamily="@font/figtreeblack"
+                            android:textColor="@color/black"
+                            android:gravity="center_vertical" />
+                        <ImageView
+                            android:id="@+id/hey"
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:src="@drawable/image_296"
+                            android:layout_marginLeft="3dp"
+                            android:layout_gravity="center_vertical"/>
+                </LinearLayout>
+
+                <!-- Line chart heading -->
+
+                <TextView
+                    android:id="@+id/text_chart_heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="3sp"
+                    android:text="Overview"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/fingtree"
+                    android:textColor="@color/grey"
+                    android:gravity="center_vertical"/>
+
+                <!-- Line Chart -->
+
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/idGraphView"
+                    android:layout_marginTop="1dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@drawable/cardtop"/>
+
+                <!-- Horizontal scrollable square cards -->
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <include
+                            android:id="@+id/top_links"
+                            layout="@layout/square_card"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
+                        <include
+                            android:id="@+id/top_location"
+                            android:layout_marginLeft="15dp"
+                            layout="@layout/square_card"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
+                        <include
+                            android:id="@+id/top_source"
+                            android:layout_marginLeft="15dp"
+                            layout="@layout/square_card"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
+                        <include
+                            android:id="@+id/best_time"
+                            android:layout_marginLeft="15dp"
+                            layout="@layout/square_card"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp" />
+
+                        <!-- We can more square cards as needed -->
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <!-- View Analytics -->
+
+                <LinearLayout
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangular_stroke"
+                    android:padding="15dp">
+
+                    <ImageView
+                        android:id="@+id/price"
+                        android:layout_width="21.5dp"
+                        android:layout_height="11.5dp"
+                        android:src="@drawable/price_boost"
+                        android:layout_marginLeft="105dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_gravity="center_vertical"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Analytics"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/figtreebold"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_vertical" />
+
+                </LinearLayout>
+
+                <!-- Horizontally spaced tabs and search button -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="20dp"
+                    android:gravity="center_vertical">
+
+                    <Button
+                        android:id="@+id/topLinksTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/initial"
+                        android:fontFamily="@font/figtreeblack"
+                        android:text="Top Links"
+                        android:textColor="@color/lightBlack" />
+
+                    <Button
+                        android:id="@+id/recentLinksTab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/initial"
+                        android:fontFamily="@font/figtreeblack"
+                        android:layout_marginLeft="8dp"
+                        android:text="Recent Links"
+                        android:textColor="@color/lightBlack" />
+
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@drawable/search"
+                        android:layout_marginLeft="60dp"/>
+
+                </LinearLayout>
+
+                <!-- White rectangular cards for displaying top links and recent links -->
+
+                <LinearLayout
+                    android:id="@+id/containerLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical">
+                </LinearLayout>
+
+                <!-- Whatsapp tab -->
+
+                <LinearLayout
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/whatsapp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/vector" />
+                    <TextView
+                        android:layout_width="200dp"
+                        android:layout_height="24dp"
+                        android:text="Talk with us"
+                        android:fontFamily="@font/figtreeblack"
+                        android:textColor="@color/black"
+                        android:paddingLeft="15dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+                <!-- FAQ tab -->
+
+                <LinearLayout
+                    android:layout_marginTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:background="@drawable/faq">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/question_mark" />
+                    <TextView
+                        android:layout_width="300dp"
+                        android:layout_height="24dp"
+                        android:text="Frequently Asked Questions"
+                        android:fontFamily="@font/figtreeblack"
+                        android:textColor="@color/black"
+                        android:paddingLeft="15dp"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
